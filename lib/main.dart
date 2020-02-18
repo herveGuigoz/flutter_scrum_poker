@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:scrum_poker/Bloc/app_bloc.dart';
 import 'package:scrum_poker/router.dart';
 import 'package:scrum_poker/ui/common/app_colors.dart';
@@ -10,6 +11,11 @@ void main() => runApp(App());
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // Allow portait only
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
     return BlocProvider<AppBloc>(
       blocBuilder: () => AppBloc(),
       blocDispose: (AppBloc bloc) => bloc?.dispose(),

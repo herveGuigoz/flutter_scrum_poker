@@ -15,7 +15,6 @@ class SelectedCard extends StatefulWidget {
 }
 
 class _SelectedCardState extends State<SelectedCard> {
-  // TODO verifier length -1
   final _randomNumber = Random().nextInt(kIcons.length - 1);
 
   bool isFlipped = false;

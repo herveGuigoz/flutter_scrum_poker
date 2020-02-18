@@ -40,7 +40,6 @@ class DefaultAppBar extends StatelessWidget with PreferredSizeWidget {
           ? <Widget>[
               IconButton(
                 icon: Icon(Icons.settings, color: Colors.white60),
-                // TODO Page Notifications
                 onPressed: () => Navigator.pushNamed(context, '/settings'),
                 tooltip: "Notifications",
               ),
